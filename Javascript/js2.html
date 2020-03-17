@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS demo 1</title>
+</head>
+
+<body>
+
+    <div style="margin-top: 20px;">
+        <input type="text" name="userName" id="num1">
+        <br><br>
+
+        <h1> result:</h1>
+        <h3 id="banner"> </h3>
+
+    </div>
+    <div>
+        <button type="button" onclick="com()">Generate Table</button>
+    </div>
+
+    <script>
+        function com() {
+            var num1 = document.getElementById('num1').value;
+            var x=1;
+            var op="";
+            for(x=1;x<=10;x++)
+            {
+                op=op+"\n"+String(num1)+" * "+String(x)+" = "+String(x*num1);
+            }
+            document.getElementById('banner').innerText = op;
+        }
+    </script>
+</body>
+
+</html>

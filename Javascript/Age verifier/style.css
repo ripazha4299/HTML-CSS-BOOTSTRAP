@@ -1,0 +1,88 @@
+#signform{
+  margin: auto;
+  background-color:white;
+  border: 0.8px solid grey;
+  border-radius: 5px;
+  height: 500px ;
+  width:  450px ;
+  padding-top: 35px;
+}
+
+.signin
+{
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
+.normal
+{
+  font-family: sans-serif;
+  font-size: 15px;
+  padding-left: 20px;
+}
+
+.signinlarge
+{
+  font-family: sans-serif;
+  font-size: 25px;
+}
+
+.hyperlink
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: dodgerblue;
+  text-align: left;
+  text-decoration-line: none;
+  padding-left: 20px;
+  font-weight: bold;
+}
+
+#email{
+  height: 30px;
+  width: 85%;
+  padding-left: 20px;
+}
+
+.center {
+  padding-top: 200px;
+  }
+
+.col2{
+  padding-left: 40%;
+}
+
+button {
+  background-color: dodgerblue;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.dropbtn {
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
