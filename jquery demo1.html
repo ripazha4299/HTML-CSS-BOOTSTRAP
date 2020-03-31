@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="edit">
+        some text
+    </div>
+    <!-- font color -->
+    font-color:
+    <select name="" id="fcolor">
+        <option value="red">red</option>
+        <option value="blue">blue</option>
+    </select>
+    <!-- font size -->
+    font-size:
+    <select name="" id="fsize">
+        <option value="30px">30</option>
+        <option value="40px">40</option>
+    </select>
+    <!-- border style-->
+    border-style:
+    <select name="" id="bstyle">
+        <option value="solid">solid</option>
+        <option value="dashed">dashed</option>
+    </select>
+    <!-- border color -->
+    border-color:
+    <select name="" id="bcolor">
+        <option value="violet">violet</option>
+        <option value="green">green</option>
+    </select>
+
+    <button id="apply">apply</button>
+</body>
+<script>
+    $('#apply').click(function(){
+        $('#edit').css({
+            "color":$('#fcolor').val(),
+            "font-size":$('#fsize').val(),
+            "border-style":$('#bstyle').val(),
+            "border-color":$('#bcolor').val()
+        });
+    });
+</script>
+
+</html>
