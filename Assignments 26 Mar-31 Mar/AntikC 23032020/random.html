@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to display a random number.</p>
+
+<button onclick="my()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+    function my()
+    {
+const num = Math.ceil(Math.random() * 10);
+console.log(num);
+ const gnum = prompt('Guess the number between 1 and 10 inclusive');
+ if (gnum == num)
+   document.write('Matched');
+  else
+   document.write('Not matched, the number was '+num);
+    }
+</script>
+
+</body>
+</html>

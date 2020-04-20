@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Book Store</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- custom CSS -->
+    <link rel="stylesheet" type="text/css" href="./CSS1.css">
+</head>
+
+<body class="bg-dark">
+    <!-- navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand text-primary font-weight-bold" href="#top">
+                Book Store
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#bookdynamic">Books</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="viewCart()">Cart</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <a class="nav-link" onclick="viewCart()"><i class="fa fa-shopping-cart text-primary" style="font-size:24px"></i></a>
+                    <span id="count" class="badge">0</span>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+    <!-- about -->
+    <div id="about" class="position-relative overflow-hidden text-center bg-dark" style="color: beige;">
+        <div class="col-md-8 p-lg-8 mx-auto my-5">
+            <h1 class="display-4 font-weight-normal">About us</h1>
+            <p class="lead font-weight-normal">We offer huge collection of books in diverse category of Fiction,
+                Non-fiction, Biographies, History, Religions, Self -Help, Children. </p>
+            <p class="lead font-weight-normal">We attempt to extend the customer satisfaction by catering
+                easy user-friendly search engine, quick and user-friendly payment options and quicker delivery systems.
+                Upside to all of this, we are disposed to provide exciting offers and pleasant discounts on our books.
+            </p>
+            <a class="btn btn-outline-secondary" href="./books.html">View Books</a>
+        </div>
+    </div>
+    <!-- about end-->
+
+    <!-- test container -->
+    <div id="bookdynamic" class="container col-8 pt-4" >
+        <div class="row p-4">
+            <div class="col-12 bg-info p-3 text-inline">
+                <i class="fa fa-book text-dark" style="font-size:24px"></i>
+                <span class="text-dark"> &nbsp; Books</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalTitle">Book Name</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id="ModalBody" class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Go Back</button>
+                    <span id="knowMoreFooter"></span> <!-- footer -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="modal fade bd-example-modal-lg" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <i class="fa fa-shopping-cart" style="font-size:24px"></i>
+                <span class="text-light"> &nbsp; Shopping Cart</span>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id="cartModalBody" class="modal-body">
+                    <div class="row p-4">
+                        <div class="col-12" style="max-height: 400px; overflow: auto">
+                            <table class="table table-sm" id="ordersTable">
+                                <thead class="thead">
+                                    <!-- head not reqd-->
+                                </thead>
+                                <tbody>
+                                    <!-- data here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row p-4">
+                        
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <span class="text-light">
+                        &nbsp; Total Amount : ₹ 
+                        <span id="total" class="font-weight-bold">0</span>
+                        &nbsp;
+                    </span>
+                    <button type="button" class="btn btn-info">Check Out</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- cart modal ends-->
+
+    <!-- copyright section-->
+    <div class="bg-secondary text-center text-dark p-3">
+        <span></span>
+    </div>
+    <!-- copyright section-->
+
+    <script src="JavaScript.js"></script>
+</body>
+
+</html>
